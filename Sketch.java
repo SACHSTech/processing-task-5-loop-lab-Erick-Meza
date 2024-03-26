@@ -208,5 +208,19 @@ public class Sketch extends PApplet {
 
   // Creates a method for the eighth quadrant of the image
   public void draw_section8() {
+
+    // Initializes variables
+    int intPixelNumber = 900;
+
+    // Creates a Nested Loop to print out pixels to the screen
+    for (int i = 4; i <= intPixelNumber; i += 10) {
+      for (int j = 1194; j >= intPixelNumber; j -= 10) {
+        fill(255, 255, 255);
+        rect(j, i, 5, 5);
+      }
+
+      // Reassigns the value of the variable
+      intPixelNumber += 10;
+    }
   }
 }
