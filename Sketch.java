@@ -73,6 +73,26 @@ public class Sketch extends PApplet {
 
   // Creates a method for the second quadrant of the image
   public void draw_section2() {
+    // Creates a Nested loop to create pixel drawing
+    for (int i = 0; i < 30; i++) {
+      for (int j = 0; j < 30; j++) {
+
+        // Creates a Conditional Selective Algorithm to determine the colour of the
+        // pixels
+        if (j % 2 == 0) {
+          fill(255, 255, 255);
+        } else if (j % 2 != 0) {
+          fill(0, 0, 0);
+        }
+
+        // Initializes variables
+        int intXCoordinate = 304 + j * 5 * 2;
+        int intYCoordinate = 304 + i * 5 * 2;
+
+        // Prints out squares to the screen
+        rect(intXCoordinate, intYCoordinate, 5, 5);
+      }
+    }
   }
 
   // Creates a method for the third quadrant of the image
@@ -93,9 +113,9 @@ public class Sketch extends PApplet {
 
   // Creates a method for the seventh quadrant of the image
   public void draw_section7() {
-    }
+  }
 
   // Creates a method for the eighth quadrant of the image
   public void draw_section8() {
-    }
   }
+}
