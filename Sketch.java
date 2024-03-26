@@ -2,7 +2,8 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 	
-	
+	float fltWidth = width;
+  float fltHeight = height;
   /**
    * Called once at the beginning of execution, put your size all in this method
    */
@@ -71,20 +72,17 @@ public class Sketch extends PApplet {
    * draws the bottom left section
    */
   public void draw_section1(){
-    int intX = 0;
-    int intY = 0;
-
-    for(int intRow = 0; intRow < 30; intRow++){
-      for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 3 + 0;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + 0; //Instead of zero, calculate the proper intY location using 'intColumn'
-
-        fill(255);
-        noStroke();
-        rect(intX, intY, 5, 5);
-
+    for (int a = 0; a <= 30; a++){ 
+      for (float i = 2; i < width / 4; i+= 10){
+        for(float j = 302; j < 600; j+= 10){
+          noStroke();
+          fill(255,255,255);
+          rect(i, j, 5, 5);
+        }
+        
       }
     }
+
   }
 
   /**
@@ -92,7 +90,6 @@ public class Sketch extends PApplet {
    * Don't loop from 30 to 60 to shift everything over, just add 300 to x.
    */
   public void draw_section2(){
-
   }
 
   /**
@@ -114,7 +111,14 @@ public class Sketch extends PApplet {
    * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
    */
   public void draw_section5(){
-
+    int n = 898;
+    for (int i = 4; i <= n; i += 10){
+      for (int j = 602; j <= n; j += 10){
+        fill(255, 255, 255);
+        rect(j, i, 5, 5);
+        
+      }n -= 10;
+    }
   }
 
   public void draw_section6(){
@@ -122,11 +126,11 @@ public class Sketch extends PApplet {
   }
 
   public void draw_section7(){
-
+    
   }
   
   public void draw_section8(){
-
+    
   }
 
 
